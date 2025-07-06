@@ -1,0 +1,35 @@
+1. Import Required Libraries  
+   TensorFlow, Keras, NumPy, Matplotlib, Seaborn, Gradio, etc.
+
+2. Load & Preprocess Dataset  
+   Used ImageDataGenerator with preprocess_input from EfficientNet for scaling.
+
+3. Split Data into Training & Validation Sets  
+   Applied 80/20 split using ImageDataGenerator.flow_from_directory()
+
+4. Use EfficientNetV2B2 as Base Model  
+   Loaded pre-trained EfficientNetV2B2 from Keras Applications (weights = "imagenet").
+
+5. Freeze Base Model & Add Custom Layers  
+   Added: GlobalAveragePooling2D → Dense → Dropout → Final output layer with softmax activation.
+
+6. Compile & Train the Model  
+   Optimizer: Adam  
+   Loss: Categorical Crossentropy  
+   Callbacks used: EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
+
+7. Evaluate Model Performance  
+   Accuracy  
+   Confusion Matrix  
+   Classification Report (Precision, Recall, F1-Score)
+
+8. Save the Final Model  
+   Exported model in .keras format for deployment.
+
+9. Build Gradio UI for Live Predictions  
+   Created a simple web interface to upload and classify garbage images.
+
+10. Deploy the Model on Hugging Face Spaces  
+    Hosted the Gradio app publicly using share=True or Hugging Face deployment.
+
+

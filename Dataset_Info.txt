@@ -1,0 +1,18 @@
+Dataset Name: Garbage Classification Project By Edunet Foundation.
+Source: https://www.kaggle.com/datasets/farzadnekouei/trash-type-image-dataset
+Classes:
+- plastic
+- glass
+- cardboard
+- paper
+- battery
+- metal
+- etc.
+Total Images: ~2400
+
+Structure:
+Folder-wise classified images
+(e.g., data/plastic/, data/metal/, etc.)
+
+
+

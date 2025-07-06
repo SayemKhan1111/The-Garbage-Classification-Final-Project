@@ -1,0 +1,51 @@
+# Week 1 Observations (30%)
+
+- Opened base GitHub notebook using MobileNetV2 for transfer learning
+- Dataset was already structured in folder-wise format
+- Image size required: 224x224
+- Steps in the notebook:
+  1. Data loading using ImageDataGenerator
+  2. Basic preprocessing with rescaling
+  3. MobileNetV2 used as base model with weights='imagenet'
+  4. Added GAP and Dense layers for classification
+  5. Compiled and trained model
+  6. Achieved moderate accuracy (~60-70%)
+- Model saved as `garbage_classifier.h5`
+
+---
+
+# Week 2 Observations (60%)
+
+- Switched to EfficientNetV2B2 for better performance
+- Preprocessing done using `preprocess_input` from `efficientnet_v2`
+- Applied data augmentation: flip, zoom, contrast, rotation
+- Handled class imbalance using `class_weight`
+- Training done with:
+  - EarlyStopping (patience=3)
+  - ReduceLROnPlateau (learning rate drops if no improvement)
+- Achieved training accuracy ~97%, validation ~88%
+- Evaluation:
+  - Confusion matrix plotted using seaborn
+  - Classification report generated using sklearn
+  - Trash class had lower recall due to imbalance
+- Model saved as `efficientnetv2b2_model.keras`
+
+---
+
+# Week 3 Observations (Final)
+
+- Completed full training pipeline with EfficientNetV2B2 model
+- Applied fine-tuning by unfreezing some base model layers for better accuracy
+- Used callbacks like EarlyStopping and ReduceLROnPlateau for optimized training
+- Achieved training accuracy of ~98% and validation accuracy of ~90%
+- Evaluated model performance with:
+  - Confusion matrix showing good class-wise predictions
+  - Classification report with improved precision, recall, and F1-score
+- Visualized training and validation accuracy and loss curves over epochs
+- Saved final model as `efficientnetv2b2_model.keras`
+- Built Gradio user interface for easy image upload and live predictions
+- Successfully deployed Gradio app on Hugging Face Spaces for public access
+- Overall, project is 100% complete with robust model and user-friendly interface
+
+
+
